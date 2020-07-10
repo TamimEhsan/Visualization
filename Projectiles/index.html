@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Projectiles</title>
+    <script src="../libraries/p5.js" type="text/javascript"></script>
+    <script src="../libraries/p5.dom.js" type="text/javascript"></script>
+    <script src="../libraries/p5.sound.js" type="text/javascript"></script>
+
+    <script src="particle.js" type="text/javascript"></script>
+    <script src="sketch.js" type="text/javascript"></script>
+	<script src="JS.js" type="text/javascript"></script>
+
+    <style> body {padding: 0; margin: 0; text-align:center;} canvas {margin-left: auto; 
+	margin-right: auto; margin-top:25px;} </style>
+  </head>
+  <body>
+  <div >
+	 <table align="center" >
+		<tr>
+			<th>Red Ball</th><th> Blue Ball</th><th>Frame</th>
+		</tr>
+		<tr  style="padding:10px;border:1px;" >
+			<td>
+				<input type="range" min="-90" max="90" value="50" class="slider" id="myRange">
+				<p>Angle: <span id="demo"></span>°</p>
+				<input type="range" min="0" max="100" value="50" class="slider" id="myRange2">
+				<p>Speed: <span id="demo2"></span></p>
+				<input type="range" min="0" max="100" value="50" class="slider" id="myHeight1">
+				<p>Height: <span id="heightText1"></span></p>
+			</td>
+			<td>
+				<input type="range" min="-90" max="90" value="50" class="slider" id="myRange3">
+				<p>Angle: <span id="demo3"></span>°</p>
+				<input type="range" min="0" max="100" value="50" class="slider" id="myRange4">
+				<p>Speed: <span id="demo4"></span></p>
+				<input type="range" min="0" max="100" value="50" class="slider" id="myHeight2">
+				<p>Height: <span id="heightText2"></span></p>
+			</td>
+			<td>
+				<input type="range" min="1" max="10" value="10" class="slider" id="FPS">
+				<p>Speed: <span id="FPSspan"></span>x </p>
+			</td>
+		</tr>
+	  </table>
+  </div>
+  <Button style="margin-top:50px;" onclick="resetpos()"> Reset</Button> <br />
+  
+  <script>
+	var slider = document.getElementById("myRange");
+	var output = document.getElementById("demo");
+	output.innerHTML = slider.value;
+
+	slider.oninput = function() {
+	  output.innerHTML = this.value;
+	}
+	
+	var slider2 = document.getElementById("myRange2");
+	var output2 = document.getElementById("demo2");
+	output2.innerHTML = slider2.value;
+
+	slider2.oninput = function() {
+	  output2.innerHTML = this.value;
+	}
+	var sliderH1 = document.getElementById("myHeight1");
+	var heightText1 = document.getElementById("heightText1");
+	heightText1.innerHTML = sliderH1.value;
+
+	sliderH1.oninput = function() {
+	  heightText1.innerHTML = this.value;
+	}
+	
+	var slider3 = document.getElementById("myRange3");
+	var output3 = document.getElementById("demo3");
+	output3.innerHTML = slider3.value;
+
+	slider3.oninput = function() {
+	  output3.innerHTML = this.value;
+	}
+	
+	
+	
+	var slider4 = document.getElementById("myRange4");
+	var output4 = document.getElementById("demo4");
+	output4.innerHTML = slider4.value;
+
+	slider4.oninput = function() {
+	  output4.innerHTML = this.value;
+	}
+	var sliderH2 = document.getElementById("myHeight2");
+	var heightText2 = document.getElementById("heightText2");
+	heightText2.innerHTML = sliderH2.value;
+
+	sliderH2.oninput = function() {
+	  heightText2.innerHTML = this.value;
+	}
+	
+	var sliderFPS = document.getElementById("FPS");
+	var FPSText = document.getElementById("FPSspan");
+	FPSText.innerHTML = Math.round(sliderFPS.value*10)/100;
+
+	sliderFPS.oninput = function() {
+	  FPSText.innerHTML = Math.round(this.value*10)/100;
+	}
+  </script>
+  </body>
+</html>

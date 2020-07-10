@@ -1,0 +1,43 @@
+
+<html>
+<head style="text-align:center;">
+	<meta charset="UTF-8">
+    <title>Projectiles</title>
+    <script src="../libraries/p5.js" type="text/javascript"></script>
+    <script src="../libraries/p5.dom.js" type="text/javascript"></script>
+    <script src="../libraries/p5.sound.js" type="text/javascript"></script>
+
+	<script src = "particles.js" type="text/javascript"></script>
+	<script src = "sketch.js" type="text/javascript"></script>
+	<script src = "river.js" type="text/javascript"></script>
+	
+</head>
+<body>
+	<table align="center">
+		<tr>
+			<th>Boat</th><th> River</th><th>Frame</th>
+		</tr>
+		<tr  style="padding:10px;border:1px;" >
+			<td>
+				<input type="range" min="0" max="180" value="90" class="slider" id="boatAngle">
+				<p>Angle: <span id="boatAngleSpan"></span>°</p>
+				<input type="range" min="0" max="20" value="0" class="slider" id="boatSpeed">
+				<p>Speed: <span id="boatSpeedSpan"></span></p>
+				<input type="range" min="0" max="100" value="50" class="slider" id="boatPosition">
+				<p>Position: <span id="boatPositionSpan"></span></p>
+			</td>
+			<td>
+				<input type="range" min="-20" max="20" value="0" class="slider" id="riverSpeed">
+				<p>Speed: <span id="riverSpeedSpan"></span></p>
+			</td>
+			<td>
+				<input type="range" min="1" max="10" value="10" class="slider" id="FPS">
+				<p>Speed: <span id="FPSspan"></span>x </p>
+			</td>
+		</tr>
+	</table>
+	
+	
+	<script src="JS.js" type="text/javascript"></script>
+</body>
+</html>
